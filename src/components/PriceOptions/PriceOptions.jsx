@@ -8,7 +8,7 @@ const PriceOptions = () => {
     {
       id: 1,
       name: 'Jim Standard',
-      price: 799.99,
+      price: 99,
       features: [
         'Basic functionality',
         'Standard support',
@@ -20,34 +20,36 @@ const PriceOptions = () => {
     {
       id: 2,
       name: 'Jim Pro',
-      price: 1299.99,
+      price: 129,
       features: [
         'Enhanced functionality',
         'Priority support',
         'Moderate customization',
         'Usage analytics and reporting',
-        'Integration with popular third-party apps',
+        'Integration with popular third',
       ],
     },
     {
       id: 3,
       name: 'Jim Premium',
-      price: 1999.99,
+      price: 199,
       features: [
         'Full functionality',
         '24/7 Premium support',
         'Advanced customization',
-        'Comprehensive usage analytics and reporting',
-        'Integration with other systems and APIs',
+        'Comprehensive usage analytics',
+        'Integration with other systems  APIs',
       ],
     },
   ];
   return (
     <div>
-      <h2 className="Best Prices in the town"></h2>
-      {priceOptions.map((option) => (
-        <PriceOption key={option.id} option={option}></PriceOption>
-      ))}
+      <h2 className="text-5xl">Best Prices in the town</h2>
+      <div className="grid md:grid-cols-3 gap-6 m-12">
+        {priceOptions.map((option) => (
+          <PriceOption key={option.id} option={option}></PriceOption>
+        ))}
+      </div>
     </div>
   );
 };

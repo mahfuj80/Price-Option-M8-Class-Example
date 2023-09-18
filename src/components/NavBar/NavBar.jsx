@@ -15,7 +15,7 @@ const NavBar = () => {
   ];
   return (
     <nav className="text-black p-6 bg-yellow-200">
-      <div>
+      <div className="md:hidden">
         <div
           className="md:hidden max-w-fit cursor-pointer text-2xl"
           onClick={() => setOpen(!open)}
@@ -26,12 +26,17 @@ const NavBar = () => {
             <AiOutlineMenu></AiOutlineMenu>
           )}
         </div>
+        <ul
+          className={`p-4 text-center duration-1000  absolute ${
+            open ? 'left-8' : '-left-60'
+          } px-6 bg-yellow-200 shadow-xl`}
+        >
+          {routes.map((route) => (
+            <Link key={route.id} route={route}></Link>
+          ))}
+        </ul>
       </div>
-      <ul
-        className={`md:flex p-4 text-center duration-1000  absolute ${
-          open ? 'left-8' : '-left-60'
-        } px-6 bg-yellow-200 shadow-xl`}
-      >
+      <ul className={`hidden md:flex  text-center  px-6 bg-yellow-200`}>
         {routes.map((route) => (
           <Link key={route.id} route={route}></Link>
         ))}
