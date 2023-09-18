@@ -1,6 +1,6 @@
 // import React from 'react';
 // import PropTypes from 'prop-types';
-import { LineChart as LChart, Line, XAxis, YAxis } from 'recharts';
+import { LineChart as LChart, Line, Tooltip, XAxis, YAxis } from 'recharts';
 
 const LineChart = () => {
   const subjectMarksData = [
@@ -22,6 +22,7 @@ const LineChart = () => {
         <YAxis></YAxis>
         <Line dataKey={'math'} stroke="red"></Line>
         <Line dataKey={'physics'} stroke="green"></Line>
+        <Tooltip></Tooltip>
       </LChart>
     </div>
   );
